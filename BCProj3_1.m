@@ -11,3 +11,9 @@ y2 = input('Enter y2: ');
 
 x3 = input('Enter x3: ');
 y3 = input('Enter y3: ');
+
+A = [x1^2  x1  1;
+     x2^2  x2  1;
+     x3^2  x3  1];
+
+b = [y1; y2; y3];
