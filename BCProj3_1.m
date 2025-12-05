@@ -19,7 +19,7 @@ A = [x1^2  x1  1;
 
 b = [y1; y2; y3];
 
-coeff = A/b;
+coeff = A\b;
 a = coeff(1);
 bcoef = coeff(2);
 c = coeff(3);
@@ -27,7 +27,21 @@ c = coeff(3);
 fprintf('\nThe parabola passing through the three points is: \n)');
 fprintf(' y = %.3f x^2 %+ .3f x %= .3f\n\n',a, bcoef, c);
 
+%Graph the parabola AND the three points that the user entered on the same plot for values of x from -10 to
+% 10.
+
 x = -10:0.1:10;
 y = a*x.^2+ bcoef*x + c;
 
-%
+% Include a title and grid for the plot
+figure
+plot(x,y,'LineWidth',1.5)
+hold on;
+xp = [x1 x2 x3];
+yp = [y1 y2 y3];
+plot(xp, yp,'ro','MarkerSize',8,'MarkerFaceColor','r');
+xlabel('x');
+ylabel('y');
+title('Parabola Through Three Points');
+grid on;
+legend('Parabola','Given Points','Location','best');
