@@ -17,3 +17,8 @@ A = [x1^2  x1  1;
      x3^2  x3  1];
 
 b = [y1; y2; y3];
+
+coeff = A/b;
+a = coeff(1);
+bcoef = coeff(2);
+c = coeff(3);
